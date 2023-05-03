@@ -1,7 +1,13 @@
 const HTTP_PORT = process.env.HTTP_PORT
 const HTTP_RESPONSE_OK = process.env.HTTP_RESPONSE_OK
+const PUBLIC_PATH = process.env.PUBLIC_PATH
+const HTTP_SERVER_MESSAGE = process.env.HTTP_SERVER_MESSAGE
+const NOTFOUND_MESSAGE = process.env.NOTFOUND_MESSAGE
 
 module.exports = {
     HTTP_PORT,
-    HTTP_RESPONSE_OK
+    HTTP_RESPONSE_OK,
+    PUBLIC_PATH,
+    HTTP_SERVER_MESSAGE,
+    NOTFOUND_MESSAGE
 }

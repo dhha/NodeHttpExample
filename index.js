@@ -41,5 +41,5 @@ const handleRequest = function(req, res) {
 const server = http.createServer(handleRequest)
 
 const serve = server.listen(constants.HTTP_PORT, "localhost", function() {
-    console.log("Server is running on port", serve.address().port);
+    console.log(constants.NOTFOUND_MESSAGE, serve.address().port);
 })
