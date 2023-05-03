@@ -8,7 +8,7 @@ const handleRequest = function(req, res) {
    
     if(req.method == 'POST') {
         res.setHeader("Content-Type", "application/json")
-        res.writeHeader(200);
+        res.writeHeader(parseInt(constants.HTTP_RESPONSE_OK));
         res.end("{message: 'Hello World!'}");
     } else {
         var file = "index.html";
@@ -31,7 +31,7 @@ const handleRequest = function(req, res) {
         }
 
         fs.readFile(path.join(__dirname, file), function(err, buffer) {
-            res.writeHeader(constants.HTTP_RESPONSE_OK);
+            res.writeHeader(parseInt(constants.HTTP_RESPONSE_OK));
             res.end(buffer);
         })
     }
